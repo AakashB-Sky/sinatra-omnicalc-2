@@ -31,10 +31,15 @@ get("/wizard_subtract") do
 end
 
 get("/multiply") do
-  erb(:multiplication_form)
+  erb(:mult_form)
 end
 
-get("/wizard multiply") do
+get("/wizard_multiply") do
+  @first_number = params.fetch("first_num").to_f
+  @second_number = params.fetch("second_num").to_f
+
+  @result = @first_number * @second_number
+
   erb(:mult_result)
 end
 
