@@ -48,7 +48,7 @@ get("/divide") do
 end
 
 get("/wizard_divide") do
-  @dividend = params.fetch("dividend").to_f
+  @dividend = params.fetch("dividend").to_f 
   @divisor = params.fetch("divisor").to_f
 
   @result = @dividend / @divisor
